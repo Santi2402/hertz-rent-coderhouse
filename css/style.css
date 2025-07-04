@@ -18,7 +18,7 @@ body {
 }
 .hero {
   width: 100%;
-  background-image: url('../Img/MainBackground.png');
+  background-image: url('../img/MainBackground.png');
   background-size: cover;
   background-position: center calc(50% - 20vh);
   background-repeat: no-repeat;
@@ -404,13 +404,13 @@ body {
 }
 
 .category-card.first-class {
-  background-image: url('../Img/FirstClass.jpg'); /* Reemplazá con tu ruta */
+  background-image: url('../img/FirstClass.jpg'); /* Reemplazá con tu ruta */
   background-size: cover;
   background-position: 60% 50%;
 }
 
 .category-card.electric {
-  background-image: url('../Img/ElectricSUV.jpg'); /* Reemplazá con tu ruta */
+  background-image: url('../img/ElectricSUV.jpg'); /* Reemplazá con tu ruta */
   background-size: cover;
   background-position: 20% 50%;
 }
@@ -575,7 +575,7 @@ text-align: left;
 
 /* Hero background for Locations */
 .location-hero {
-  background-image: url('../Img/LocationBG.png');
+  background-image: url('../img/LocationBG.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -583,31 +583,31 @@ text-align: left;
 
 /* Location-specific background images */
 .ny-card {
-  background-image: url('../Img/newYork.png');
+  background-image: url('../img/newYork.png');
   background-size: cover;
   background-position: center;
 }
 
 .la-card {
-  background-image: url('../Img/losAngeles.png');
+  background-image: url('../img/losAngeles.png');
   background-size: cover;
   background-position: center;
 }
 
 .orlando-card {
-  background-image: url('../Img/orlando.png');
+  background-image: url('../img/orlando.png');
   background-size: cover;
   background-position: center;
 }
 
 .chicago-card {
-  background-image: url('../Img/chicago.png');
+  background-image: url('../img/chicago.png');
   background-size: cover;
   background-position: center;
 }
 
 .miami-card {
-  background-image: url('../Img/miami.png');
+  background-image: url('../img/miami.png');
   background-size: cover;
   background-position: center;
 }
@@ -628,7 +628,7 @@ text-align: left;
 /*VEHICLES*/
 
 .category-card.family-card {
-  background-image: url('../Img/peugeot.png');
+  background-image: url('../img/peugeot.png');
   background-size: cover;
   background-position: center;
 }
