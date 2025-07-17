@@ -631,6 +631,14 @@ select:focus {
     --bs-gutter-y: 0 !important;
   }
 }
+.vehicles-hero {
+  background-image: url("../../img/tesla.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+}
+
 .choose-car-section {
   padding: 4rem 0;
   color: #ffffff;
@@ -661,6 +669,102 @@ select:focus {
   max-width: 770px;
   height: auto;
   border-radius: 1rem;
+}
+
+.contact-hero {
+  background-image: url("../../img/contact.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+}
+
+#message {
+  height: 10rem;
+}
+
+.contact-info-section {
+  padding: 4rem 0;
+  color: #ffffff;
+}
+
+.contact-info-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 75rem;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.contact-info-text {
+  flex: 1;
+  min-width: 300px;
+}
+.contact-info-text h2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.contact-info-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.contact-info-image {
+  flex: 1;
+  min-width: 300px;
+}
+.contact-info-image img {
+  width: 100%;
+  max-width: 770px;
+  height: auto;
+  border-radius: 1rem;
+}
+
+.faq-hero {
+  background-image: url("../../img/bmw.jpg");
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+}
+
+.faq-section {
+  background: linear-gradient(134deg, rgba(116, 128, 137, 0.1) 4.35%, rgba(0, 0, 0, 0.1) 98.82%);
+  backdrop-filter: blur(41px);
+  border-radius: 1.75rem;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+  color: #ffffff;
+  padding: 2rem;
+  font-family: "Manrope", sans-serif;
+}
+.faq-section .accordion-button {
+  background-color: transparent;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.faq-section .accordion-button:not(.collapsed) {
+  color: #FCCE06;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.faq-section .accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+.faq-section .accordion-body {
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.faq-section .accordion-item {
+  background-color: transparent;
+  border: none;
 }
 
 body.light-mode {

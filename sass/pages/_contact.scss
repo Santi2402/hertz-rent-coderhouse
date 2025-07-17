@@ -1,0 +1,57 @@
+.contact-hero {
+  background-image: url('../../img/contact.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+}
+
+#message {
+  height: 10rem; // o la altura que quieras
+}
+
+.contact-info-section {
+  padding: 4rem 0;
+  color: #ffffff;
+}
+
+.contact-info-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 75rem;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.contact-info-text {
+  flex: 1;
+  min-width: 300px;
+
+  h2 {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+.contact-info-image {
+  flex: 1;
+  min-width: 300px;
+
+  img {
+    width: 100%;
+    max-width: 770px;
+    height: auto;
+    border-radius: 1rem;
+  }
+}

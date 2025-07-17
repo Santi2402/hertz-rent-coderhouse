@@ -1,4 +1,12 @@
 // pages/_vehicles.scss
+.vehicles-hero  {
+  background-image: url('../../img/tesla.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 50vh;
+}
+
 .choose-car-section {
   padding: 4rem 0;
   color: $color-light;
