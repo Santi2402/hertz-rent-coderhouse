@@ -1,0 +1,32 @@
+// pages/_vehicles.scss
+.choose-car-section {
+  padding: 4rem 0;
+  color: $color-light;
+}
+
+.choose-car-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 75rem;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.choose-car-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.choose-car-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.choose-car-image img {
+  width: 100%;
+  max-width: 770px;
+  height: auto;
+  border-radius: 1rem;
+}

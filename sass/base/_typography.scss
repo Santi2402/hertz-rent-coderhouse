@@ -1,0 +1,14 @@
+// base/_typography.scss
+.container {
+  font-family: $font-primary;
+}
+
+.MainText, .article-card {
+  font-family: $font-primary;
+}
+
+.MainText h1,
+h2, h3 {
+  font-family: $font-secondary;
+  font-style: italic;
+}

@@ -1,0 +1,31 @@
+// main.scss
+
+// 1. Abstracts
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+// 2. Base
+@import 'base/reset';
+@import 'base/globals';
+@import 'base/typography';
+
+// 3. Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/layout';
+
+// 4. Components
+@import 'components/buttons';
+@import 'components/pill';
+@import 'components/booking-card';
+@import 'components/category-card';
+
+// 5. Pages
+@import 'pages/home';
+@import 'pages/locations';
+@import 'pages/vehicles';
+@import 'pages/contact';
+@import 'pages/faq';
+
+// 6. Themes
+@import 'themes/theme';

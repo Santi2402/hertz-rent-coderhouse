@@ -1,0 +1,46 @@
+// layout/_footer.scss
+.footer {
+  background-color: #171717;
+  color: #fff;
+  padding: 2rem 0;
+  font-family: $font-primary;
+  border-top: 18px solid $color-primary;
+}
+
+.footer-container {
+  max-width: 75rem;
+  margin: auto;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-logo img {
+  height: 2rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: $color-primary;
+}
+
+.footer-copy {
+  font-size: 0.875rem;
+  color: $color-gray;
+}

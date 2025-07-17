@@ -1,0 +1,90 @@
+// components/_category-card.scss
+.category-card {
+  position: relative;
+  width: 100%;
+  height: 32.25rem;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  margin: 4rem 0;
+  font-family: $font-primary;
+}
+
+.category-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.75rem;
+  display: block;
+}
+
+.category-card.first-class {
+  background-image: url('../img/FirstClass.jpg');
+  background-size: cover;
+  background-position: 60% 50%;
+}
+
+.category-card.electric {
+  background-image: url('../img/ElectricSUV.jpg');
+  background-size: cover;
+  background-position: 20% 50%;
+}
+
+.category-card.family-card {
+  background-image: url('../img/peugeot.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  background: none;
+  border-radius: 1.75rem;
+  display: flex;
+  align-items: flex-end;
+  transition: opacity 0.3s ease, background 0.3s ease;
+  z-index: 1;
+}
+
+.category-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.1));
+  border-radius: 1.75rem;
+  z-index: 0;
+}
+
+.category-text {
+  padding: 2rem 2rem;
+  text-align: left;
+  color: $color-light;
+  max-width: 30rem;
+  z-index: 2;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.category-text h2,
+.category-text h3 {
+  font-family: $font-secondary;
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.category-text p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.category-card:hover .category-overlay {
+  background: linear-gradient(255deg, rgba(22, 22, 22, 0.0) 13.2%, rgba(6, 9, 12, 0.85) 88.86%);
+}
+
+.category-card:hover .show-cars-cta {
+  background-color: $color-primary;
+  border-color: $color-primary;
+  color: $color-dark;
+}
