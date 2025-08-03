@@ -1,0 +1,92 @@
+// sass/components/_vehicle-cards.scss
+
+.vehicle-cards {
+
+  // 1) Forzar overlay en columna y espacio entre header y footer
+  .category-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  .category-overlay::before {
+    background: none !important;
+  }
+
+  // 2) Ajustes de header: márgenes de títulos y párrafo
+  .card-header {
+        width: 100%;
+    h2.category-label {
+      font-family: $font-secondary;
+      font-style: italic;
+      color: $color-primary;    // amarillo Hertz
+      margin-bottom: 0.25rem;
+    }
+    h3 {
+      font-family: $font-secondary;
+      font-size: 1.75rem;
+      color: $color-light;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1rem;
+      color: $color-light;
+      margin-bottom: 1rem;
+    }
+
+    // 3) Mover las “pills” arriba: dentro del header
+    .features {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+
+      .badge {
+        display: flex;
+        height: 2rem;
+        padding: 0.75rem 1rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        border-radius: 3.375rem;
+        border: 1px solid $color-light;
+        font-size: 0.875rem;
+        color: $color-light;
+        background: transparent;
+
+        i {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+  // 4) Estilo de precio y botón en el footer de la card
+  .card-footer {
+    align-items: center;
+    width: 100%;
+
+    .price {
+color: $color-light;
+font-size: 2rem;
+font-style: italic;
+font-weight: 400;
+line-height: 130%;
+    }
+
+    .show-cars-cta {
+      margin-left: auto;
+    }
+  }
+ 
+  .price .cents{
+font-size: 1rem;
+  }
+  @include respond-to('mobile') {
+      .category-card {
+      margin-bottom: 3rem;
+    
+  }
+}
+}
+
+

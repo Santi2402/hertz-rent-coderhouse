@@ -3,7 +3,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 50vh;
+  min-height: 70vh;
+       @media (max-width: 992px){
+      min-height: auto;
+    }
 }
 
 #message {
@@ -27,7 +30,6 @@
 
 .contact-info-text {
   flex: 1;
-  min-width: 300px;// cambio mínimo
 
   h2 {
     font-family: "Barlow Semi Condensed", sans-serif;
@@ -45,13 +47,38 @@
 }
 
 .contact-info-image {
-  flex: 1;
-  min-width: 300px;
+  flex: 1;    
+
 
   img {
     width: 100%;
     max-width: 770px;
     height: auto;
     border-radius: 1rem;
+  }
+}
+
+    
+.contact-info-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 75rem;
+  margin: auto;
+  flex-wrap: wrap;
+
+   @include respond-to('mobile') {
+    flex-direction: column;     // apilar texto + imagen
+    text-align: left;         // centrar texto
+
+    .contact-info-text,
+    .choose-car-image {
+      width: 100%;              // ocupar todo el ancho
+    }
+
+    .choose-car-image {
+      margin-top: 1.5rem;       // separación entre texto e imagen
+    }
   }
 }

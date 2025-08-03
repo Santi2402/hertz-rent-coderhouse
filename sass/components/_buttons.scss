@@ -7,9 +7,27 @@
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 170%;
-  transition: background 0.2s ease;
   text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+   // Transición para el icono
+  img {
+    transition: filter 0.2s ease;
+    // estado inicial: icono oscuro puro
+   filter: brightness(0) saturate(100%) invert(1); // deja el icono blanco
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-dark;
+
+    // al hover aplicar filtro para “recolorear” el SVG
+    img {
+      // ajusta estos valores hasta dar con el tono deseado
+       filter: brightness(0) saturate(100%);
+    }
+  }
 }
+
 
 .login-btn:hover {
   background-color: $color-primary;
@@ -46,6 +64,16 @@
   cursor: pointer;
   white-space: nowrap;
   font-weight: 500;
+
+  /* añade transición para animar los cambios */
+  transition: 
+    background-color 0.2s ease, 
+    color 0.2s ease;
+
+  &:hover {
+    background-color: $color-dark;   // fondo negro en hover
+    color: $color-light;              // texto claro en hover
+  }
 }
 
 .show-cars-cta {

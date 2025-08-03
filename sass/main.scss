@@ -17,8 +17,10 @@
 // 4. Components
 @import 'components/buttons';
 @import 'components/pill';
+@import "components/_stats";
 @import 'components/booking-card';
 @import 'components/category-card';
+@import "components/_vehicle-cards";
 
 // 5. Pages
 @import 'pages/home';

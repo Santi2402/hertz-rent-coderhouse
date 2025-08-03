@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -170,7 +171,6 @@ h2, h3 {
 
 .page-wrapper {
   flex: 1;
-  padding-bottom: 4rem;
 }
 
 .container {
@@ -187,8 +187,19 @@ h2, h3 {
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 170%;
-  transition: background 0.2s ease;
   text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.login-btn img {
+  transition: filter 0.2s ease;
+  filter: brightness(0) saturate(100%) invert(1);
+}
+.login-btn:hover {
+  background-color: #FCCE06;
+  color: #141414;
+}
+.login-btn:hover img {
+  filter: brightness(0) saturate(100%);
 }
 
 .login-btn:hover {
@@ -226,6 +237,12 @@ h2, h3 {
   cursor: pointer;
   white-space: nowrap;
   font-weight: 500;
+  /* añade transición para animar los cambios */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.show-cars-btn:hover {
+  background-color: #141414;
+  color: #ffffff;
 }
 
 .show-cars-cta {
@@ -275,6 +292,29 @@ h2, h3 {
 
 .pill.active {
   background: #FCCE06;
+}
+
+.hertz-stats {
+  background-color: #FFD400;
+}
+.hertz-stats .stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: #141414;
+}
+.hertz-stats .stat-label {
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  color: #141414;
+}
+@media (min-width: 1200px) {
+  .hertz-stats .stat-number {
+    font-size: 2.5rem;
+  }
+  .hertz-stats .stat-label {
+    font-size: 1rem;
+  }
 }
 
 .booking-card {
@@ -398,13 +438,19 @@ select:focus {
 .category-card.electric {
   background-image: url("../img/ElectricSUV.jpg");
   background-size: cover;
+  background-position: left center;
+}
+
+.category-card.electricSUV {
+  background-image: url("../img/familyCar.png");
+  background-size: cover;
   background-position: 20% 50%;
 }
 
 .category-card.family-card {
-  background-image: url("../img/peugeot.png");
+  background-image: url("../img/toyota.png");
   background-size: cover;
-  background-position: center;
+  background-position: left center;
 }
 
 .category-overlay {
@@ -461,6 +507,97 @@ select:focus {
   color: #141414;
 }
 
+.category-card.luxury {
+  background-image: url("../img/Mercedes-Benz- C-Class.png");
+  background-size: cover;
+  background-position: center 60%;
+}
+
+.category-card.midsize {
+  background-image: url("../img/Toyota-RAV4.png");
+  background-size: cover;
+  background-position: center 60%;
+}
+
+.category-card.compact {
+  background-image: url("../img/Nissan-Sentra.png");
+  background-size: cover;
+  background-position: center 50%;
+}
+
+.vehicle-cards .category-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+.vehicle-cards .category-overlay::before {
+  background: none !important;
+}
+.vehicle-cards .card-header {
+  width: 100%;
+}
+.vehicle-cards .card-header h2.category-label {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-style: italic;
+  color: #FCCE06;
+  margin-bottom: 0.25rem;
+}
+.vehicle-cards .card-header h3 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.75rem;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+.vehicle-cards .card-header p {
+  font-size: 1rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+.vehicle-cards .card-header .features {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+.vehicle-cards .card-header .features .badge {
+  display: flex;
+  height: 2rem;
+  padding: 0.75rem 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 3.375rem;
+  border: 1px solid #ffffff;
+  font-size: 0.875rem;
+  color: #ffffff;
+  background: transparent;
+}
+.vehicle-cards .card-header .features .badge i {
+  font-size: 1rem;
+}
+.vehicle-cards .card-footer {
+  align-items: center;
+  width: 100%;
+}
+.vehicle-cards .card-footer .price {
+  color: #ffffff;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 130%;
+}
+.vehicle-cards .card-footer .show-cars-cta {
+  margin-left: auto;
+}
+.vehicle-cards .price .cents {
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .vehicle-cards .category-card {
+    margin-bottom: 3rem;
+  }
+}
+
 .hero {
   width: 100%;
   background-image: url("../img/MainBackground.png");
@@ -470,6 +607,13 @@ select:focus {
   background-attachment: fixed;
   padding-bottom: 5rem;
   margin-top: 0;
+  min-height: 70vh;
+}
+@media (max-width: 992px) {
+  .hero {
+    background-position: center calc(50% - 10vh);
+    min-height: auto;
+  }
 }
 
 .MainText {
@@ -482,6 +626,11 @@ select:focus {
   font-family: "Manrope", sans-serif;
   color: #ffffff;
   text-align: center;
+}
+@media (min-width: 992px) {
+  .MainText .MainText {
+    padding-bottom: 0;
+  }
 }
 
 .MainText h1 {
@@ -526,7 +675,6 @@ select:focus {
   border-radius: 1.5rem;
   padding: 2rem;
   flex: 1 1 0;
-  min-width: 250px;
   color: #ffffff;
   font-family: "Manrope", sans-serif;
   display: flex;
@@ -632,11 +780,18 @@ select:focus {
   }
 }
 .vehicles-hero {
-  background-image: url("../img/tesla.jpg");
+  width: 100%;
+  background-image: url("../img/tesla.png");
   background-size: cover;
-  background-position: center;
+  background-position: center calc(50% - 20vh);
   background-repeat: no-repeat;
-  min-height: 50vh;
+  min-height: 70vh;
+}
+@media (max-width: 768px) {
+  .vehicles-hero {
+    background-position: center;
+    min-height: 50vh;
+  }
 }
 
 .choose-car-section {
@@ -653,15 +808,26 @@ select:focus {
   margin: auto;
   flex-wrap: wrap;
 }
+@media (max-width: 768px) {
+  .choose-car-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .choose-car-content .choose-car-text,
+  .choose-car-content .choose-car-image {
+    width: 100%;
+  }
+  .choose-car-content .choose-car-image {
+    margin-top: 1.5rem;
+  }
+}
 
 .choose-car-text {
   flex: 1;
-  min-width: 300px;
 }
 
 .choose-car-image {
   flex: 1;
-  min-width: 300px;
 }
 
 .choose-car-image img {
@@ -676,7 +842,12 @@ select:focus {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 50vh;
+  min-height: 70vh;
+}
+@media (max-width: 992px) {
+  .contact-hero {
+    min-height: auto;
+  }
 }
 
 #message {
@@ -700,7 +871,6 @@ select:focus {
 
 .contact-info-text {
   flex: 1;
-  min-width: 300px;
 }
 .contact-info-text h2 {
   font-family: "Barlow Semi Condensed", sans-serif;
@@ -717,7 +887,6 @@ select:focus {
 
 .contact-info-image {
   flex: 1;
-  min-width: 300px;
 }
 .contact-info-image img {
   width: 100%;
@@ -726,12 +895,40 @@ select:focus {
   border-radius: 1rem;
 }
 
+.contact-info-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 75rem;
+  margin: auto;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .contact-info-content {
+    flex-direction: column;
+    text-align: left;
+  }
+  .contact-info-content .contact-info-text,
+  .contact-info-content .choose-car-image {
+    width: 100%;
+  }
+  .contact-info-content .choose-car-image {
+    margin-top: 1.5rem;
+  }
+}
+
 .faq-hero {
   background-image: url("../img/bmw.jpg");
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
-  min-height: 50vh;
+  min-height: 70vh;
+}
+@media (max-width: 992px) {
+  .faq-hero {
+    min-height: auto;
+  }
 }
 
 .faq-section {

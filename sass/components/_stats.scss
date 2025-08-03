@@ -1,0 +1,25 @@
+// sass/components/_stats.scss
+@import '../abstracts/mixins';  // ① importa el mixin
+
+.hertz-stats {
+  background-color: #FFD400;
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: $color-dark;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    color: $color-dark;
+  }
+
+  // ② usa respond-to y el parámetro 'desktop' o 'mobile'
+  @include respond-to('desktop') {
+    .stat-number { font-size: 2.5rem; }
+    .stat-label  { font-size: 1rem;   }
+  }
+}

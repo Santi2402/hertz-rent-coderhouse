@@ -1,10 +1,16 @@
 // pages/_vehicles.scss
 .vehicles-hero  {
-  background-image: url('../img/tesla.jpg');
+  width: 100%;
+  background-image: url('../img/tesla.png');
   background-size: cover;
-  background-position: center;
+  background-position: center calc(50% - 20vh);
   background-repeat: no-repeat;
-  min-height: 50vh;
+  min-height: 70vh;
+
+      @include respond-to('mobile'){
+      background-position: center ;
+        min-height:50vh;
+    }
 }
 
 .choose-car-section {
@@ -20,16 +26,28 @@
   max-width: 75rem;
   margin: auto;
   flex-wrap: wrap;
+
+   @include respond-to('mobile') {
+    flex-direction: column;     // apilar texto + imagen
+    text-align: left  ;         // centrar texto
+
+    .choose-car-text,
+    .choose-car-image {
+      width: 100%;              // ocupar todo el ancho
+    }
+
+    .choose-car-image {
+      margin-top: 1.5rem;       // separación entre texto e imagen
+    }
+  }
 }
 
 .choose-car-text {
   flex: 1;
-  min-width: 300px;
 }
 
 .choose-car-image {
   flex: 1;
-  min-width: 300px;
 }
 
 .choose-car-image img {
@@ -37,4 +55,8 @@
   max-width: 770px;
   height: auto;
   border-radius: 1rem;
+}
+
+.section-title{
+
 }

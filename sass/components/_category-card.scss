@@ -26,13 +26,19 @@
 .category-card.electric {
   background-image: url('../img/ElectricSUV.jpg');
   background-size: cover;
+  background-position: left center;
+}
+
+.category-card.electricSUV {
+  background-image: url('../img/familyCar.png');
+  background-size: cover;
   background-position: 20% 50%;
 }
 
 .category-card.family-card {
-  background-image: url('../img/peugeot.png');
+  background-image: url('../img/toyota.png');
   background-size: cover;
-  background-position: center;
+  background-position: left center;
 }
 
 .category-overlay {
@@ -87,4 +93,22 @@
   background-color: $color-primary;
   border-color: $color-primary;
   color: $color-dark;
+}
+
+// Backgrounds para Vehicles
+.category-card.luxury {
+  background-image: url('../img/Mercedes-Benz- C-Class.png');
+  background-size: cover;
+  background-position: center 60%;
+}
+.category-card.midsize {
+  background-image: url('../img/Toyota-RAV4.png');
+  background-size: cover;
+  background-position: center 60%;
+}
+
+.category-card.compact {
+  background-image: url('../img/Nissan-Sentra.png');
+  background-size: cover;
+  background-position: center 50%;
 }
