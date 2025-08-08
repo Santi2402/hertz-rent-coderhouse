@@ -1,6 +1,6 @@
 // components/_booking-card.scss
 .booking-card {
-  margin-top: 5rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
   width: 100%;
   max-width: 75rem;
@@ -14,7 +14,11 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+     @media (max-width: 992px){
+        margin-top: 2rem,;
+     }
 }
+
 
 .booking-row {
   display: flex;
