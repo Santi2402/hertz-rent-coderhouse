@@ -338,6 +338,12 @@ h2, h3 {
     margin-top: 2rem;
   }
 }
+@media (max-height: 900px) {
+  .booking-card {
+    margin-top: 0;
+    position: static;
+  }
+}
 
 .booking-row {
   display: flex;
@@ -636,6 +642,12 @@ select:focus {
   .hero {
     background-position: center calc(50% - 10vh);
     min-height: auto;
+  }
+}
+@media (max-height: 900px) {
+  .hero {
+    margin-top: 2rem;
+    position: static;
   }
 }
 
